@@ -28,7 +28,7 @@ function Menu() {
   return (
     <div className="">
       <a className="text-[25px] font-Bold text-gray-700 pl-5">Меню</a>
-      <div className="pt-4 flex justify-between space-x-4 pl-4 pr-4">
+      <div className="pt-4 flex justify-between space-x-4 pl-4 pr-4 ">
         {menuItems.map((item, index) => (
           <MenuItem key={index} imageSrc={item.imageSrc} title={item.title} link={item.link} />
         ))}

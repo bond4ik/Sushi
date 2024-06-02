@@ -61,7 +61,7 @@ function Stocks() {
               <p className="text-sm text-gray-400">{product.ingredients}</p>
             </div>
             <div className="flex justify-between items-center mt-2">
-              <button className="bg-orange-500 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition-colors">
+              <button className="bg-orange-500 text-white px-4 py-2 rounded-full transition-colors duration-500 hover:bg-gray-700">
                 Заказать
               </button>
               <span className="text-lg font-bold text-gray-700">{product.price}</span>
