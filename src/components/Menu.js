@@ -1,7 +1,14 @@
 function MenuItem({ imageSrc, title, link }) {
+  const smoothScroll = (e, id) => {
+    e.preventDefault(); 
+    document.querySelector(id).scrollIntoView({
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <div className="menu-item border max-w-64 rounded-2xl">
-      <a href={link}>
+      <a onClick={(e) => smoothScroll(e, link)}>
         <img src={imageSrc} alt={title} className="w-full h-auto rounded-t-2xl" />
         <p className="text-center py-2 text-gray-700 text-md">{title}</p>
       </a>
@@ -31,4 +38,3 @@ function Menu() {
 }
 
 export default Menu;
-
