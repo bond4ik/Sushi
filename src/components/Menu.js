@@ -9,8 +9,8 @@ function MenuItem({ imageSrc, title, link }) {
   return (
     <div className="menu-item border max-w-64 rounded-2xl">
       <a onClick={(e) => smoothScroll(e, link)}>
-        <img src={imageSrc} alt={title} className="w-full h-auto rounded-t-2xl" />
-        <p className="text-center py-2 text-gray-700 text-md">{title}</p>
+        <img src={imageSrc} alt={title} className="cursor-pointer w-full h-auto rounded-t-2xl" />
+        <p className="cursor-pointer text-center py-2 text-gray-700 text-md">{title}</p>
       </a>
     </div>
   );
