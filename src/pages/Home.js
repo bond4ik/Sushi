@@ -12,7 +12,7 @@ function Home() {
   return (
     <div className="container mx-auto">
       <Header />
-      <div>
+      <div className="sticky top-0 bg-white pt-4 pb-4">
         <SH />
       </div>
       <div className="pt-[20px]">

@@ -16,6 +16,7 @@ function SH() {
       <a className='cursor-pointer' onClick={() => smoothScroll('#sushi')}>Суши</a> 
       <a className='cursor-pointer' onClick={() => smoothScroll('#stocks')}>АКЦИИ НАБОРЫ</a>
       <FaTh className="text-lg" />
+      <a className="border-solid border-2 border-orange-500 bg-orange-500 text-white px-7 py-2 rounded-full transition-colors duration-500 hover:bg-gray-700 hover:border-gray-700" href="#login">Корзина</a>
     </div>
   );
 }

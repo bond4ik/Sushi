@@ -17,7 +17,6 @@ function Header() {
           <PhoneIcon className="h-5 w-5 mr-2"/>
           +7 911 974-58-43
         </a>
-        <a className="border-solid border-2 border-orange-500 bg-orange-500 text-white px-7 py-2 rounded-full transition-colors duration-500 hover:bg-gray-700 hover:border-gray-700" href="#login">Корзина</a>
         <a className="border-solid border border-gray-300 text-gray-700 px-7 py-2 rounded-full hover:bg-gray-700 transition-colors duration-500 hover:text-white" href="#login">Войти</a>
       </div>
     </header>
