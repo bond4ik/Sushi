@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import Modal from './Modal';
+import CartModal from './CartModal';
+import { addToCart } from './cart';
 
 
 function ClassicRolls() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isInfoModalOpen, setIsInfoModalOpen] = useState(false);
+  const [isCartOpen, setIsCartOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const [cartItems, setCartItems] = useState([]);
 
   const products = [
     {
@@ -65,17 +69,22 @@ function ClassicRolls() {
     }
   ];
 
-  const openModal = (product) => {
+  const addToCartHandler = (product) => {
+    addToCart(product);
+  };
+
+  const openInfoModal = (product) => {
     setSelectedProduct(product);
-    setIsModalOpen(true);
+    setIsInfoModalOpen(true);
   };
 
   return (
     <>
-      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} product={selectedProduct} />
+      <Modal isOpen={isInfoModalOpen} onClose={() => setIsInfoModalOpen(false)} product={selectedProduct} />
+      <CartModal isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} items={cartItems} />
 
       <div className="pt-10 pl-2">
-        <a id="classic-rolls" className="text-[25px] font-Bold text-gray-700 pl-3">Классические роллы</a>
+        <a id="baked-rolls" className="text-[25px] font-Bold text-gray-700 pl-3">Классические роллы</a>
       </div>
 
       <div className="grid grid-cols-4 gap-4">
@@ -85,17 +94,14 @@ function ClassicRolls() {
               src={product.image}
               alt={product.name}
               className="w-full rounded-2xl mb-2 cursor-pointer"
-              onClick={() => openModal(product)}
-            />
+              onClick={() => openInfoModal(product)}/>
             <div>
               <h3 className="text-lg font-bold text-gray-700">{product.name}</h3>
               <p className="text-gray-700">{product.weight}</p>
               <p className="text-sm text-gray-400">{product.ingredients}</p>
             </div>
             <div className="flex justify-between items-center mt-2">
-              <button className="bg-orange-500 text-white px-4 py-2 rounded-full transition-colors duration-500 hover:bg-gray-700">
-                Заказать
-              </button>
+              <button className="bg-orange-500 text-white px-4 py-2 rounded-full transition-colors duration-500 hover:bg-gray-700" onClick={() => addToCartHandler(product)}>Заказать</button>
               <span className="text-lg font-bold text-gray-700">{product.price}</span>
             </div>
           </div>
