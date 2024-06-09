@@ -237,7 +237,7 @@ function ClassicRolls() {
       <CartModal isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} items={cartItems} />
 
       <div className="pt-10 pl-2">
-        <a id="baked-rolls" className="text-[25px] font-Bold text-gray-700 pl-3">Суши</a>
+        <a id="sushi" className="text-[25px] font-Bold text-gray-700 pl-3">Суши</a>
       </div>
 
       <div className="grid grid-cols-4 gap-4">

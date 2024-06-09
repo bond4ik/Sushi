@@ -84,7 +84,7 @@ function ClassicRolls() {
       <CartModal isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} items={cartItems} />
 
       <div className="pt-10 pl-2">
-        <a id="baked-rolls" className="text-[25px] font-Bold text-gray-700 pl-3">Классические роллы</a>
+        <a id="classic-rolls" className="text-[25px] font-Bold text-gray-700 pl-3">Классические роллы</a>
       </div>
 
       <div className="grid grid-cols-4 gap-4">
